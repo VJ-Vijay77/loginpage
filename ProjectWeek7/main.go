@@ -33,7 +33,6 @@ func main() {
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/logout", logout)
-	//http.Handle("/", NoCache(http.HandlerFunc(index)))
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -162,16 +161,3 @@ func logout(w http.ResponseWriter, req *http.Request) {
 	http.Redirect(w, req, "/login", http.StatusSeeOther)
 }
 
-/*
-func NoCache(h http.Handler) http.Handler {
-	fn := func(w http.ResponseWriter, r *http.Request) {
-		// Set the headers
-		w.Header().Set("Cache-Control", "no-cache, private, max-age=-1")
-		w.Header().Set("Expires", time.Unix(0, 0).Format(http.TimeFormat))
-		w.Header().Set("Pragma", "no-cache")
-		w.Header().Set("X-Accel-Expires", "0")
-	}
-
-	return http.HandlerFunc(fn)
-}
-*/
