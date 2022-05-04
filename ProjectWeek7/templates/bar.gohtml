@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CEO</title>
+</head>
+<body>
+
+<h1>Welcome to the CEO PANEL. What can I get you ?</h1>
+
+{{if .First}}
+<b>FIRST NAME : </b>{{.First}}<br>
+<b>LAST NAME : </b>{{.Last}}<br>
+<b>USER NAME :</b>{{.UserName}}<br>
+<b><i>Password(encrypted) :</i></b>{{.Password}}<br>
+
+
+<h2><a href="/"> <button type="button"> Home Page</button></a></h2>
+{{end}}
+
+
+
+</body>
+</html>

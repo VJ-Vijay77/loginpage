@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1515167647803-ca95677dcd75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
+           
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        a:hover {
+          opacity: 0.8;
+          color: blue;
+        }
+    </style>
+</head>
+<body>  
+
+{{if .First}}
+<b>FIRST NAME : </b>{{.First}}<br>
+<b>LAST NAME : </b>{{.Last}}<br>
+<b>USER NAME :</b>{{.UserName}}<br>
+<b><i>Password(encrypted) :</i></b>{{.Password}}<br>
+<h2><a href="/logout">log out</a></h2>
+{{else}}
+<center><h2><a href="/signup">Sign Up</a></h2>
+<h2><a href="/login">Log In</a></h2></center>
+{{end}}
+
+<br>
+<h2><center>Go to <a href="/bar">The CEO Panel</center></a></h2>
+
+</body>
+</html>
